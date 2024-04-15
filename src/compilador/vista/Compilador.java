@@ -15,7 +15,7 @@ public class Compilador extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        combobox = new javax.swing.JComboBox<>();
         botonCompilar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -31,14 +31,16 @@ public class Compilador extends javax.swing.JFrame {
         terminal = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jComboBox1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Archivo", "Guardar", "Guardar Como", "Cerrar" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        combobox.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Archivo", "Abrir", "Guardar", "Guardar Como", "Cerrar" }));
+        combobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                comboboxActionPerformed(evt);
             }
         });
 
@@ -87,7 +89,7 @@ public class Compilador extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botonCompilar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
@@ -114,7 +116,7 @@ public class Compilador extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1)
+                    .addComponent(combobox)
                     .addComponent(botonCompilar, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
@@ -163,9 +165,9 @@ public class Compilador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void comboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_comboboxActionPerformed
 
     private void botonCompilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompilarActionPerformed
         // TODO add your handling code here:
@@ -182,7 +184,7 @@ public class Compilador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton botonCompilar;
     public javax.swing.JTextArea codigo;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> combobox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
